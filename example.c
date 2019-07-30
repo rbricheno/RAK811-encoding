@@ -12,7 +12,7 @@ const char *hexdigits = "0123456789ABCDEF";
  */
 char* makeRak (uint8_t* inputBuffer, int inputSize) {
     int i, j;
-    char* compositionBuffer = (char *) malloc(inputSize*2+1);
+    char* compositionBuffer = (char*) malloc(inputSize*2 + 1);
     for (i = j = 0; i < inputSize; i++) {
         unsigned char c;
         c = (inputBuffer[i] >> 4) & 0xf;
@@ -27,7 +27,7 @@ int main(void) {
   // uint8_t* inputBuffer = lpp.getBuffer();
   // int inputSize = lpp.getSize();
   char a[] = "ABCD";
-  uint8_t* inputBuffer = (uint8_t*)a;
+  uint8_t* inputBuffer = (uint8_t*) a;
   int inputSize = sizeof(inputBuffer);
   char* p = rk_dataHex(inputBuffer, inputSize);
   puts(p);
