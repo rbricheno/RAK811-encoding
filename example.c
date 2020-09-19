@@ -29,7 +29,7 @@ int main(void) {
   char a[] = "ABCD";
   uint8_t* inputBuffer = (uint8_t*) a;
   int inputSize = sizeof(inputBuffer);
-  char* p = rk_dataHex(inputBuffer, inputSize);
+  char* p = makeRak(inputBuffer, inputSize);
   puts(p);
   free(p);
 }
